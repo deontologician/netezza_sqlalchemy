@@ -1,7 +1,9 @@
 Netezza SQLAlchemy
 ==================
 
-SQLAlchemy dialect for the Netezza database
+SQLAlchemy dialect for the Netezza database.
+
+This is far from complete, has a lot of bugs etc. Pull requests and bug reports appreciated.
 
 Usage:
 
