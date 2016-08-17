@@ -7,10 +7,12 @@ from sqlalchemy.dialects.postgresql.base import (
     PGDialect, PGTypeCompiler, PGCompiler, PGDDLCompiler, DOUBLE_PRECISION,
     INTERVAL, TIME, TIMESTAMP)
 import sqlalchemy.types as sqltypes
-from sqlalchemy.schema import SchemaItem
+from sqlalchemy.schema import DDLElement, SchemaItem
 from sqlalchemy.sql import text, bindparam
 import pyodbc
 import re
+from sqlalchemy.schema import DDLElement
+from sqlalchemy.ext.compiler import compiles
 
 
 # pylint:disable=R0901,W0212
@@ -28,7 +30,7 @@ class NVARCHAR(sqltypes.NVARCHAR):
     '''Netezza NVARCHAR'''
     def __init__(self, length=None, collation=None,
                  convert_unicode='force',
-                 unicode_error=coerce_nvarchar):
+                 unicode_error=None):
         super(NVARCHAR, self).__init__(
             length,
             collation=collation,
