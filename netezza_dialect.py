@@ -11,7 +11,6 @@ from sqlalchemy.schema import DDLElement, SchemaItem
 from sqlalchemy.sql import text, bindparam
 import pyodbc
 import re
-from sqlalchemy.schema import DDLElement
 from sqlalchemy.ext.compiler import compiles
 
 
