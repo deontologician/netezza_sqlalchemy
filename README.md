@@ -3,7 +3,9 @@ Netezza SQLAlchemy
 
 SQLAlchemy dialect for the Netezza database.
 
-This is far from complete, has a lot of bugs etc. Pull requests and bug reports appreciated.
+This is far from complete, has a lot of bugs etc, but it might give you a start.
+
+Note: I don't have access to Netezza anymore so I can't maintain this, but feel free to fork!
 
 Usage:
 
